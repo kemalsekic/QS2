@@ -1,0 +1,28 @@
+{
+    "title": ".as() - alias a DOM element for later use",
+    "fullTitle": "Aliasing .as() - alias a DOM element for later use",
+    "timedOut": null,
+    "duration": 822,
+    "state": "passed",
+    "speed": "fast",
+    "pass": true,
+    "fail": false,
+    "pending": false,
+    "context": null,
+    "code": [
+        {
+            "Step 1" : "cy.get('.as-table').find('tbody>tr').first().find('td').first().find('button').as('firstBtn');"
+        },
+        {
+            "Step 2" : "cy.get('@firstBtn').click();"
+        },
+        {
+            "Step 3" : "cy.get('@firstBtn').should('have.class', 'btn-success').and('contain', 'Changed');"
+        }
+    ],
+    "err": {},
+    "uuid": "10568ed4-ca23-41f3-ae84-5d6b79094d57",
+    "parentUUID": "e47ba7c1-3eb3-47b1-8348-b74f3b430764",
+    "isHook": false,
+    "skipped": false
+  }
