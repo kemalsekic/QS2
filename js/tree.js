@@ -1,7 +1,15 @@
-// var treeData = require('../testResults.json');
-// console.log(treeData)
+// var treeData = require('../treeData/treeData');
+var treeData = require('../reports/mochawesome.json');
+console.log(treeData.data)
 
-var treeData = {
+
+document.getElementById('btnTest').addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("btnTest").innerHTML = "Hello World";
+}
+
+var treeData = treeData = {
   name: "Alias element",
   children: [
     {
@@ -54,7 +62,6 @@ var treeData = {
     },
   ],
 };
-
 var margin = { top: 20, right: 90, bottom: 20, left: 90 };
 var width = 1280 - margin.left - margin.right;
 var height = 1024 - margin.top - margin.bottom;

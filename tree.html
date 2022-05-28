@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/simple-grid.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="css/simple-grid.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-1"><a href="index.html">Index</a></div>
-      <div class="col-1"><a href="tree.html">Tree</a></div>
-
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-1"><a href="index.html">Index</a></div>
+        <div class="col-1"><a href="tree.html">Tree</a></div>
+        <div class="col-1">
+          <button class="btnTest" id="btnTest">Test</button>
+        </div>
+        <p id="demo">t</p>
+        
+      </div>
     </div>
-  </div>
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-  <script type="text/javascript" src="js/tree.js"></script>
-</body>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script type="module/javascript" src="js/tree.js"></script>
+    <script type="module/javascript" src="js/treeData.js"></script>
 
+    <script>
+      document.getElementById("btnTest").addEventListener("click", myFunction);
+      
+      document.getElementById("btnTest").addEventListener("mouseover", myFunction);
+
+      function myFunction() {
+        document.getElementById("btnTest").innerHTML = "Hello World";document.getElementById("demo").innerHTML = "Looks good!<br>"
+      }
+    </script>
+  </body>
 </html>
