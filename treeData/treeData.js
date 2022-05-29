@@ -1,5 +1,5 @@
-module.exports = function (treeData) {
-    treeData = {
+module.exports = function () {
+    return {
         name: "Alias element",
         children: [
           {
@@ -51,7 +51,6 @@ module.exports = function (treeData) {
             name: "Step 4",
           },
         ],
-      };
-    return treeData;
+      }
 }
 
